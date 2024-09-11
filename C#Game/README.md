@@ -14,6 +14,4 @@ press R to restart the game once it ends
 ```
 
 ## Game Demo
-```
 ![](Images/HungaryBee_Demo.gif)
-```
