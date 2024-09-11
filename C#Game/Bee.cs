@@ -4,16 +4,18 @@ using System.Windows.Forms;
 
 public class Bee
 {
-    private Image bee;
+    private Image bee, effect;
     private float velocity;
     public float x;
     public float y;
+    public bool _effect = false;
 
     public void Setup()
     {
         velocity = 0.0f;
         x = 50.0f;
         y = (float)(Window.height * 0.5);
+        effect = Image.FromFile("Images/Effect.png");
         bee = Image.FromFile("Images/Bee.png");
     }
 
@@ -26,6 +28,10 @@ public class Bee
     public void Draw(Graphics g)
     {
         g.DrawImage(bee, x, y, 96, 96);
+        if (_effect)
+        {
+            g.DrawImage(effect, x, y, 96, 96);
+        }
     }
 
     public void MouseClick(MouseEventArgs mouse)

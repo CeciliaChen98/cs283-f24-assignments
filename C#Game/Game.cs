@@ -37,6 +37,7 @@ public class Game
 
     public void Update(float dt)
     {
+        _bee._effect = false;
         _bee.Update(dt);
         if (_bee.y > (height + 96)) { health = 0; }
         foreach (Flower flower in _flowers) {
@@ -46,6 +47,7 @@ public class Game
                 health--;
             }
             if (flower._visible && CalculateDistance(_bee.x, _bee.y, flower.x, flower.y) < 70.0f) {
+                _bee._effect = true;
                 score++;
                 flower._visible = false;
             }
@@ -62,6 +64,7 @@ public class Game
         format.Alignment = StringAlignment.Center;
 
         g.DrawImage(background, 0, 0, width, height);
+
         if(health > 0)
         {
             foreach (Flower flower in _flowers)
