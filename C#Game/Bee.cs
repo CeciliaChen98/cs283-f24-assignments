@@ -1,3 +1,6 @@
+/* author: Yue Chen
+ * date: Sept.12, 2024
+*/
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -21,6 +24,7 @@ public class Bee
 
     public void Update(float dt)
     {
+        // the velocity follows the gravity rule
         velocity += dt * 98.0f ;
         y += velocity * dt;
     }
@@ -43,6 +47,7 @@ public class Bee
     {
         if (key.KeyCode == Keys.Space)
         {
+            // the bee fly up and the velocity is reset
             velocity = 20.0f;
             y -= 20.0f; 
         }
