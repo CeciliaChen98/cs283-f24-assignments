@@ -18,11 +18,13 @@ public class Game
 
     public void Setup()
     {
+        // Load the background image
         background = Image.FromFile("Images/Background.png");
         _bee.Setup();
         bool _flag = false;
         for (int i=0; i<4; i++) {
             _flowers[i] = new Flower();
+            // Assign different images to flowers
             if (_flag)
             {
                 _flowers[i].Setup("Images/Flower1.png",i);
@@ -44,8 +46,10 @@ public class Game
             // if a flower isn't collected by the bee
             if (!flower.Update(dt))
             {
+                // If a flower is not collected, the bee will lose its health
                 health--;
             }
+            // Check if the bee is close enough to the flowers
             if (flower._visible && CalculateDistance(_bee.x, _bee.y, flower.x, flower.y) < 70.0f) {
                 _bee._effect = true;
                 score++;
@@ -56,6 +60,7 @@ public class Game
 
     public void Draw(Graphics g)
     {
+        // Set up the format and font for texts
         Font font = new Font("Times New Roman", 15);
         SolidBrush fontBrush = new SolidBrush(Color.Black);
 
@@ -63,8 +68,10 @@ public class Game
         format.LineAlignment = StringAlignment.Center;
         format.Alignment = StringAlignment.Center;
 
+        // Draw the background image
         g.DrawImage(background, 0, 0, width, height);
 
+        // Main Scene 
         if(health > 0)
         {
             foreach (Flower flower in _flowers)
@@ -81,6 +88,7 @@ public class Game
         }
         else
         {
+            // End Scene
             if (score > Hightest) { Hightest = score; }
             g.DrawString("Your Score is " + score.ToString()+ "\nPress R to Restart", font, fontBrush,
                   (float)(width * 0.5),
@@ -91,7 +99,6 @@ public class Game
                   (float)(height * 0.2),
                   format);
         }
-
         if (_creditBox) { 
             g.DrawString("Yue Chen, 2025, Hungary Bee", font, fontBrush,
                (float)(width * 0.25),
@@ -118,6 +125,7 @@ public class Game
         {
             _creditBox = !_creditBox;
         }
+        // 'R' functions only when health <= 0
         else if(key.KeyCode == Keys.R && health <=0)
         {
             health = 3;
@@ -130,6 +138,8 @@ public class Game
         }
     }
 
+    // Calculate the distance between two points: x and y
+    // Return the distance as a float
     public float CalculateDistance(float x1, float y1, float x2, float y2)
     {
         float distance = (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);
