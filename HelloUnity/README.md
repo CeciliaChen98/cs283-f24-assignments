@@ -11,7 +11,8 @@ Right Side: a quest area where a plane crash happened
 ![](Screenshots/plane.png)
 
 ## Flythrough camera & POI
-
+https://github.com/CeciliaChen98/cs283-f24-assignments/blob/main/HelloUnity/Screenshots/flythrough.mp4
+https://github.com/CeciliaChen98/cs283-f24-assignments/blob/main/HelloUnity/Screenshots/flythrough.mp4
 
 ## Credits
 ```
