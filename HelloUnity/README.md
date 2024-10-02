@@ -1,4 +1,14 @@
 # RPG Game
+## Camera
+```
+Rigid Follow Camera
+```
+![](Screenshots/rigidCamera.gif)
+```
+Spring Follow Camera
+```
+![](Screenshots/springCamera.gif)
+
 ## Level Buildup
 ```
 Left Side: a small village where the player will start
