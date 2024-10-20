@@ -1,4 +1,26 @@
 # RPG Game
+
+## FollowPath
+```
+Linear
+```
+![](Screenshots/FollowPathLinear.gif)
+
+```
+Cubic
+```
+![](Screenshots/FollowPathCubic.gif)
+
+## inverse kinematics
+```
+Gaze Controller
+```
+![](Screenshots/IK.gif)
+```
+Two Chain Controller
+```
+![](Screenshots/IK_two_chain.gif)
+
 ## Camera
 ```
 Rigid Follow Camera
