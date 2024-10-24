@@ -1,4 +1,7 @@
 # RPG Game
+## Motion and Collider
+![](Screenshots/walk.gif)
+![](Screenshots/collide.gif)
 
 ## FollowPath
 ```
@@ -31,6 +34,10 @@ Spring Follow Camera
 ```
 ![](Screenshots/springCamera.gif)
 
+## Flythrough camera & POI
+![](Screenshots/flythrough.gif)
+![](Screenshots/tour.gif)
+
 ## Level Buildup
 ```
 Left Side: a small village where the player will start
@@ -41,10 +48,6 @@ Right Side: a quest area where a plane crash happened
 ![](Screenshots/houses.png)
 ![](Screenshots/fence.png)
 ![](Screenshots/plane.png)
-
-## Flythrough camera & POI
-![](Screenshots/flythrough.gif)
-![](Screenshots/tour.gif)
 
 ## Credits
 ```
