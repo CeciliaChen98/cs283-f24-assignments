@@ -25,6 +25,7 @@ public class PlayerMotionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        controller.Move(transform.up * moveSpeed * -Time.deltaTime);
         if (Input.GetKey(KeyCode.W))
         {
             MoveForward(moveSpeed);

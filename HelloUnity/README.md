@@ -1,5 +1,12 @@
 # RPG Game
-## Motion and Collider
+## Feature: Collection Game
+### Week 9
+```
+Implementing the object spawner and pick-up animation
+```
+![](Screenshots/collecting.gif)
+## Feature: Motion and Collider
+### Week 8
 ![](Screenshots/walk.gif)
 ![](Screenshots/collide.gif)
 
