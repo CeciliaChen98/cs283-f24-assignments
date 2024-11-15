@@ -1,4 +1,21 @@
 # RPG Game
+## NPC Behaviors
+### Week 11
+#### Enemy NPC
+```
+attack the player if the player comes within range of it
+retreat if the the player returns to their home area
+follow the player if the player runs away
+```
+![](Screenshots/Enemy_follow.gif)
+![](Screenshots/Enemy_home.gif)
+#### Companion  NPC
+```
+follow the player if the player comes to him
+follow the enemy if the enemy comes within range of it
+```
+![](Screenshots/find_NPC.gif)
+![](Screenshots/NPC_follow.gif)
 ## AI: Wander
 ### Week 10
 ![](Screenshots/Wander.gif)
