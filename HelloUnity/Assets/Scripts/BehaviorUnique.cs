@@ -86,7 +86,7 @@ public class BehaviorUnique : MonoBehaviour
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
 
-        Vector3 target = home.position + UnityEngine.Random.insideUnitSphere * wanderRadius;
+        Vector3 target = home.position  +  UnityEngine.Random.insideUnitSphere * wanderRadius;
         NavMeshHit hit;
 
         if (NavMesh.SamplePosition(target, out hit, wanderRadius, NavMesh.AllAreas))
