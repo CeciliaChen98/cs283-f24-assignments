@@ -50,6 +50,13 @@ public class BehaviorMinion : MonoBehaviour
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
 
+        ParticleSystem particle = GetComponent<ParticleSystem>();
+        Renderer render = particle.GetComponent<Renderer>();
+
+        if (render != null)
+        {
+            render.enabled = false;
+        }
         Vector3 target = center.position + UnityEngine.Random.insideUnitSphere * wanderRadius;
         NavMeshHit hit;
 
@@ -73,6 +80,13 @@ public class BehaviorMinion : MonoBehaviour
     IEnumerator<BTState> MoveToPlayer()
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        ParticleSystem particle = GetComponent<ParticleSystem>();
+        Renderer render = particle.GetComponent<Renderer>(); 
+
+        if(render != null)
+        {
+            render.enabled = true;
+        }
 
         while (IsPlayerInRange()&&(!IsPlayerInHomeArea()))
         {

@@ -1,12 +1,16 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using BTAI;
+using TMPro;
 
 public class BehaviorUnique : MonoBehaviour
 {
     public Transform player;
+    public TextMeshProUGUI text;
     public Transform home;
     public float followRange = 10.0f;
     public float attackRange = 30.0f;
@@ -23,7 +27,8 @@ public class BehaviorUnique : MonoBehaviour
             BT.Selector().OpenBranch(
                 BT.Sequence().OpenBranch(
                     BT.Condition(() => needToFollow()),
-                    BT.RunCoroutine(TalkToPlayer)
+                    BT.RunCoroutine(TalkToPlayer),
+                    BT.Wait(2f)
                 ),
                 BT.Sequence().OpenBranch(
                     BT.Condition(() => IsEnemyNearBy()),
@@ -109,7 +114,7 @@ public class BehaviorUnique : MonoBehaviour
     IEnumerator<BTState> MoveToPlayer()
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
-
+       
         while (isFollowed&&(!isAttack))
         {
             if (IsEnemyNearBy())
@@ -125,14 +130,14 @@ public class BehaviorUnique : MonoBehaviour
 
     IEnumerator<BTState> TalkToPlayer()
     {
-        Debug.Log("HERE");
+        text.text = "Let me help you!";
         isFollowed = true;
-
         yield return BTState.Failure;
     }
 
     IEnumerator<BTState> MoveToEnemy()
     {
+        text.text = "I'll attack the enemy";
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
 
         while (isAttack)
