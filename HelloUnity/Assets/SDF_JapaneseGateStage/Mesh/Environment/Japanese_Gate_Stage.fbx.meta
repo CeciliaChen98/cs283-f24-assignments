@@ -1,0 +1,235 @@
+fileFormatVersion: 2
+guid: 5f437776c7ffe974da74b42d9a4f6953
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Gate_DoorLeft
+    100002: Gate_DoorRight
+    100004: Gate_Doors_Group
+    100006: GateMain_Collison
+    100008: GateMain_Group
+    100010: GateWalls_E
+    100012: GateWalls_E_Collison
+    100014: GateWalls_E_Group
+    100016: GateWalls_F
+    100018: GateWalls_F_Collison
+    100020: GateWalls_F_Group
+    100022: Ground_A
+    100024: Ground_B
+    100026: Ground_GateWalkway
+    100028: Ground_Group
+    100030: //RootNode
+    100032: polySurface301
+    100034: StoneWalkway_A
+    100036: StoneWalkway_A 1
+    100038: StoneWalkway_B
+    100040: StoneWalkway_B 1
+    100042: StoneWalkway_C
+    100044: StoneWalkway_C_Group
+    100046: StoneWalkway_D
+    100048: StoneWalkway_F
+    100050: StoneWalkway_SideStones_Left
+    100052: StoneWalkway_SideStones_Right
+    400000: Gate_DoorLeft
+    400002: Gate_DoorRight
+    400004: Gate_Doors_Group
+    400006: GateMain_Collison
+    400008: GateMain_Group
+    400010: GateWalls_E
+    400012: GateWalls_E_Collison
+    400014: GateWalls_E_Group
+    400016: GateWalls_F
+    400018: GateWalls_F_Collison
+    400020: GateWalls_F_Group
+    400022: Ground_A
+    400024: Ground_B
+    400026: Ground_GateWalkway
+    400028: Ground_Group
+    400030: //RootNode
+    400032: polySurface301
+    400034: StoneWalkway_A
+    400036: StoneWalkway_A 1
+    400038: StoneWalkway_B
+    400040: StoneWalkway_B 1
+    400042: StoneWalkway_C
+    400044: StoneWalkway_C_Group
+    400046: StoneWalkway_D
+    400048: StoneWalkway_F
+    400050: StoneWalkway_SideStones_Left
+    400052: StoneWalkway_SideStones_Right
+    2100000: Ground
+    2100002: StoneWalkway
+    2100004: pasted__Collision_MAT
+    2100006: GateMain_
+    2100008: Gate_Door
+    2100010: GateWalls
+    2300000: Gate_DoorLeft
+    2300002: Gate_DoorRight
+    2300004: GateMain_Collison
+    2300006: GateWalls_E
+    2300008: GateWalls_E_Collison
+    2300010: GateWalls_F
+    2300012: GateWalls_F_Collison
+    2300014: Ground_A
+    2300016: Ground_B
+    2300018: Ground_GateWalkway
+    2300020: polySurface301
+    2300022: StoneWalkway_A
+    2300024: StoneWalkway_A 1
+    2300026: StoneWalkway_B
+    2300028: StoneWalkway_B 1
+    2300030: StoneWalkway_C
+    2300032: StoneWalkway_D
+    2300034: StoneWalkway_F
+    2300036: StoneWalkway_SideStones_Left
+    2300038: StoneWalkway_SideStones_Right
+    3300000: Gate_DoorLeft
+    3300002: Gate_DoorRight
+    3300004: GateMain_Collison
+    3300006: GateWalls_E
+    3300008: GateWalls_E_Collison
+    3300010: GateWalls_F
+    3300012: GateWalls_F_Collison
+    3300014: Ground_A
+    3300016: Ground_B
+    3300018: Ground_GateWalkway
+    3300020: polySurface301
+    3300022: StoneWalkway_A
+    3300024: StoneWalkway_A 1
+    3300026: StoneWalkway_B
+    3300028: StoneWalkway_B 1
+    3300030: StoneWalkway_C
+    3300032: StoneWalkway_D
+    3300034: StoneWalkway_F
+    3300036: StoneWalkway_SideStones_Left
+    3300038: StoneWalkway_SideStones_Right
+    4300000: Ground_GateWalkway
+    4300002: Ground_A
+    4300004: Ground_B
+    4300006: StoneWalkway_A
+    4300008: StoneWalkway_B
+    4300010: StoneWalkway_C
+    4300012: StoneWalkway_D
+    4300014: StoneWalkway_F
+    4300016: StoneWalkway_SideStones_Right
+    4300018: StoneWalkway_SideStones_Left
+    4300020: GateMain_Collison
+    4300022: polySurface301
+    4300024: Gate_DoorLeft
+    4300026: Gate_DoorRight
+    4300028: GateWalls_F_Collison
+    4300030: GateWalls_F
+    4300032: GateWalls_E_Collison
+    4300034: GateWalls_E
+    4300036: StoneWalkway_A
+    4300038: StoneWalkway_B
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GateMain_
+    second: {fileID: 2100000, guid: b75c622444ab47942adb40d251d7f883, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GateWalls
+    second: {fileID: 2100000, guid: 20e488c11835c1b428c58b9902f2330d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gate_Door
+    second: {fileID: 2100000, guid: c41c38bf3136c21499097985e45cc9cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ground
+    second: {fileID: 2100000, guid: b8ba629fbae191b45a57308746fd0b14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StoneWalkway
+    second: {fileID: 2100000, guid: 2bd727b3e1c9ece40af93c05ec99098b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Collision_MAT
+    second: {fileID: 2100000, guid: 8050852816df86b49857bc88494f07ec, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Collectable
   - Enemy
+  - TreeBranchesSmall
+  - TreeBranches
+  - Fire
+  - Candle
+  - Lantern
   layers:
   - Default
   - TransparentFX
