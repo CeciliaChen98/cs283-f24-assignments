@@ -11,6 +11,9 @@ public class CandleCollect : MonoBehaviour
     private GameObject candle;
     private GameObject fire;
     public TextMeshProUGUI tip;
+    public TextMeshProUGUI output;
+    public GameObject leftdoor;
+    public GameObject rightdoor;
     private bool isFirst;
     private bool isOn;
     private bool isLantern = false;
@@ -25,7 +28,7 @@ public class CandleCollect : MonoBehaviour
         fire = GameObject.Find("Character/Hand/Candle/Fire");
         lanterns = GameObject.FindGameObjectsWithTag("Lantern");
     }
-
+    
     void Update()
     {
         if(count == 0)
@@ -51,18 +54,43 @@ public class CandleCollect : MonoBehaviour
         }
         if(isOn)
         {
+            bool allLight = true;
             isLantern = false;
             foreach (GameObject lantern in lanterns)
             {
-                if (lantern != null) { LightLantern(lantern); }
+                if (lantern != null) {
+                    if (!LightLantern(lantern)){ allLight = false; }
+                }
             }
             if (!isLantern)
             {
                 tip.text = "";
             }
+            if (allLight)
+            {
+                StartCoroutine(OpenDoor());
+            }
         }
     }
 
+    private IEnumerator OpenDoor()
+    {
+        float elapsedTime = 0f; // Time elapsed since the start
+        while (elapsedTime < 4.0f)
+        {
+            if(elapsedTime > 1.0f)
+            {
+                output.text = "The Door is Open!!!\nRun Fast!!!";
+            }
+            // Calculate the rotation at the current point in time
+            float t = elapsedTime / 4.0f;
+            rightdoor.transform.localRotation = Quaternion.Lerp(Quaternion.Euler(0, 0, 0), Quaternion.Euler(0, 90, 0), t);
+            leftdoor.transform.localRotation = Quaternion.Lerp(Quaternion.Euler(0, 0, 0), Quaternion.Euler(0, -90, 0), t);
+
+            elapsedTime += Time.deltaTime; // Increment elapsed time
+            yield return null; // Wait for the next frame
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Candle"))
@@ -73,19 +101,22 @@ public class CandleCollect : MonoBehaviour
         }
     }
 
-    private void LightLantern(GameObject lantern)
+    private bool LightLantern(GameObject lantern)
     {
         float distance = Vector3.Distance(transform.position, lantern.transform.position);
+        GameObject light = lantern.transform.Find("Point Light").gameObject;
         if (distance < 8.0f)
         {
             isLantern = true;
             tip.text = "Press 'E' to light the lantern";
             if (Input.GetKeyDown(KeyCode.E))
             {
-                GameObject light = lantern.transform.Find("Point Light").gameObject;
                 light.SetActive(true);
+                float newIntensity = RenderSettings.ambientIntensity + 0.1f;
+                RenderSettings.ambientIntensity = newIntensity;
             }
         }
+        return light.activeSelf;
     }
 
     private IEnumerator TriggerCollectEffect(GameObject candle)

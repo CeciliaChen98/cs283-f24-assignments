@@ -30,7 +30,7 @@ public class FirstPersonCamera : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         
-        StartCoroutine(DisableMovementForSeconds(8));
+        StartCoroutine(DisableMovementForSeconds(4));
     }
 
     private IEnumerator DisableMovementForSeconds(float seconds)
