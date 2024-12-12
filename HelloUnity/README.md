@@ -19,7 +19,7 @@ Choose "Scenes/The_Red_Lantern.unity" to build and run
 ![](Screenshots/start.gif)  
 ![](Screenshots/catch.gif)  
 ![](Screenshots/end.gif)  
-Video Link
+Video Link  
 [![Watch the video](https://img.youtube.com/vi/uY2yV0wbGas/0.jpg)](https://youtu.be/uY2yV0wbGas)
 
 ## Important Features
