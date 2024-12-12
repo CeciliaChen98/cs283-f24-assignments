@@ -16,10 +16,10 @@ Open "HelloUnity"
 Choose "Scenes/The_Red_Lantern.unity" to build and run
 ```
 ## Demo Video
-![](Screenshots/start.gif)
-![](Screenshots/catch.gif)
-![](Screenshots/end.gif)
-  
+![](Screenshots/start.gif)  
+![](Screenshots/catch.gif)  
+![](Screenshots/end.gif)  
+Video Link
 [![Watch the video](https://img.youtube.com/vi/uY2yV0wbGas/0.jpg)](https://youtu.be/uY2yV0wbGas)
 
 ## Important Features
