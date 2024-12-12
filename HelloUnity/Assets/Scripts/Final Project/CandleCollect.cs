@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CandleCollect : MonoBehaviour
 {
@@ -10,14 +11,18 @@ public class CandleCollect : MonoBehaviour
     private int count = 0;
     private GameObject candle;
     private GameObject fire;
+    public GameObject UIending;
+    public GameObject ending;
     public TextMeshProUGUI tip;
     public TextMeshProUGUI output;
     public GameObject leftdoor;
     public GameObject rightdoor;
+    public GameObject ghost;
     private bool isFirst;
     private bool isOn;
     private bool isLantern = false;
     private GameObject[] lanterns;
+    private Image image;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +32,7 @@ public class CandleCollect : MonoBehaviour
         candle = GameObject.Find("Character/Hand/Candle");
         fire = GameObject.Find("Character/Hand/Candle/Fire");
         lanterns = GameObject.FindGameObjectsWithTag("Lantern");
+        image = UIending.GetComponent<Image>();
     }
     
     void Update()
@@ -76,12 +82,9 @@ public class CandleCollect : MonoBehaviour
     private IEnumerator OpenDoor()
     {
         float elapsedTime = 0f; // Time elapsed since the start
-        while (elapsedTime < 4.0f)
+        while (elapsedTime < 3.0f)
         {
-            if(elapsedTime > 1.0f)
-            {
-                output.text = "The Door is Open!!!\nRun Fast!!!";
-            }
+            output.text = "The Door is Open!!!\nRun Fast!!!";
             // Calculate the rotation at the current point in time
             float t = elapsedTime / 4.0f;
             rightdoor.transform.localRotation = Quaternion.Lerp(Quaternion.Euler(0, 0, 0), Quaternion.Euler(0, 90, 0), t);
@@ -89,6 +92,28 @@ public class CandleCollect : MonoBehaviour
 
             elapsedTime += Time.deltaTime; // Increment elapsed time
             yield return null; // Wait for the next frame
+        }
+        float distance = Vector3.Distance(transform.position, ending.transform.position);
+        float alpha = 0.0f;
+        while (distance > 5.0f)
+        {
+            if (distance < 15.0f)
+            {
+                ghost.SetActive(false);
+            }
+            output.text = "";
+            distance = Vector3.Distance(transform.position, ending.transform.position);
+            alpha = 1.1f - (distance / 25.0f);
+            alpha = Mathf.Clamp(alpha, 0.0f, 1.0f);
+            image.color = new Color(image.color.r, image.color.g, image.color.b, alpha);
+            yield return null;
+        }
+        GetComponent<FirstPersonCamera>().enabled = false;
+        while (true)
+        {
+            output.text = "Congradulation!\nYou are safe!!!";
+            tip.text = "Press ESC to quit";
+            yield return null;
         }
     }
     private void OnTriggerEnter(Collider other)

@@ -43,7 +43,7 @@ public class FirstPersonCamera : MonoBehaviour
     {
         if (!canMove) return;
 
-        float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? 2*speed : speed;
+        float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? 1.8f*speed : speed;
 
         float moveDirectionY = Input.GetAxis("Vertical") * currentSpeed;
         float moveDirectionX = Input.GetAxis("Horizontal") * currentSpeed;

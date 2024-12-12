@@ -10,7 +10,6 @@ public class GhostBehavior : MonoBehaviour
 {
     public Transform player;
     public Transform home;
-    public GameObject uiPanel;
     public TextMeshProUGUI output;
     public TextMeshProUGUI restart_output;
     public float attack = 30.0f;
@@ -44,8 +43,8 @@ public class GhostBehavior : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            //Application.Quit();
-            UnityEditor.EditorApplication.isPlaying = false;
+            Application.Quit();
+            //UnityEditor.EditorApplication.isPlaying = false;
         }
 
         if (candle.activeSelf)
@@ -56,8 +55,8 @@ public class GhostBehavior : MonoBehaviour
         {
             attackRange = attack;
         }
-
-        if (died&&Input.GetKeyDown(KeyCode.Space))
+        //if (Input.GetKeyDown(KeyCode.Space))
+        if (died && Input.GetKeyDown(KeyCode.Space))
         {
             RestartGame();
         }
@@ -148,7 +147,6 @@ public class GhostBehavior : MonoBehaviour
                 transform.LookAt(player);
 
                 // UI setting
-                uiPanel.SetActive(true);
                 output.text = "You are caught!!!\nThere's nowhere left to run!!!";
                 restart_output.text = "Press SPACE to restry";
 
